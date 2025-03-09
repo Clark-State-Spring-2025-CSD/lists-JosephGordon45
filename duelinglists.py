@@ -18,3 +18,28 @@
 #Player two's highest number is 8 at index 1
 #Player one's lowest number is 1 at index 4
 #Player two's lowest number is 1 at index 5
+
+playerone = []
+
+playertwo = []
+
+for i in range(10):
+    playerone.append(int(input("Player one enter a number between 1-50: ")))
+    
+for i in range(10):
+    playertwo.append(int(input("Player two enter a number between 1-50: ")))
+
+playeronewins = 0
+playertwowins = 0
+
+for i in range(10):
+    if playerone[i] > playertwo[i]:
+        playeronewins += 1
+    elif playerone[i] < playertwo[i]:
+        playertwowins += 1
+        
+print(f"Player One won {playeronewins} times")
+print(f"Player Two won {playertwowins} times")
+
+print(f"Player one's highest number is {max(playerone)} at index {playerone.index(max(playerone))}")
+print(f"Player two's highest number is {max(playertwo)} at index {playertwo.index(max(playertwo))}")
